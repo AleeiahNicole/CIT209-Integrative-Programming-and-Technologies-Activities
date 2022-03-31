@@ -1,0 +1,216 @@
+//Tadeo, Aleeiah Nicole A. BSIT 2-B
+//Activity #2 - Create 2 more sequence of LED Light Show
+
+int speed1 = 300;
+int speed2 = 100;
+int speed3 = 500;
+int speed4 = 0;
+int counter;
+
+void setup()
+{
+
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+
+ // Lightshow Sequence #1 (1 style with 3 repeats)
+
+void LedLightShow1()
+{
+  for (counter = 0; counter < 3; ++counter) {
+  digitalWrite(13, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(12, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(11, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(10, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(9, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(8, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(7, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(6, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(5, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+  digitalWrite(4, HIGH);
+  delay(speed1); // Wait for speed1 millisecond(s)
+ 
+  digitalWrite(13, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(12, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(11, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(10, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(9, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(8, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(7, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(6, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(5, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+  digitalWrite(4, LOW);
+  delay(speed4); // Wait for speed4 millisecond(s)
+    
+} 
+  
+}
+ 
+ // Lightshow Sequence #2 (2 styles with 2 repeates)
+
+void LedLightShow2()
+{
+  for (counter = 0; counter < 2; ++counter) {
+  
+  //Style #1
+    digitalWrite(13, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(12, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(11, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(10, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(9, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(8, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(7, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(6, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(5, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(4, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+
+    digitalWrite(13, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(12, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(11, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(10, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(9, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(8, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+  	digitalWrite(7, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(6, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(5, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(4, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    
+   //Style #2
+    digitalWrite(4, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(5, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(6, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(7, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(8, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(9, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(10, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(11, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(12, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(13, HIGH);
+    delay(speed2); // Wait for speed2 millisecond(s)
+
+    digitalWrite(4, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(5, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(6, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(7, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(8, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(9, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+  	digitalWrite(10, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(11, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(12, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+    digitalWrite(13, LOW);
+    delay(speed2); // Wait for speed2 millisecond(s)
+  
+ } 
+}
+
+
+  // Lightshow Sequence #3 (2 style with 5 repeats)
+
+void LedLightShow3()
+{
+   for (counter = 0; counter < 5; ++counter) {
+   
+    //Style #1
+    digitalWrite(13, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(9, HIGH);
+    digitalWrite(7, HIGH);
+    digitalWrite(5, HIGH);
+    
+    delay(speed3); // Wait for speed3 millisecond(s)
+    
+    digitalWrite(12, LOW);
+    digitalWrite(10, LOW);
+    digitalWrite(8, LOW);
+    digitalWrite(6, LOW);
+    digitalWrite(4, LOW);
+    delay(speed3); // Wait for speed3 millisecond(s)
+  
+   //Style #2
+    digitalWrite(12, HIGH);
+    digitalWrite(10, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(6, HIGH);
+    digitalWrite(4, HIGH);
+    
+    delay(speed3); // Wait for speed3 millisecond(s)
+    
+    digitalWrite(13, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(7, LOW);
+    digitalWrite(5, LOW);
+    delay(speed3); // Wait for speed3 millisecond(s)
+  }
+}
+
+ void loop()
+{
+      LedLightShow1();
+      LedLightShow2();
+      LedLightShow3();
+}
