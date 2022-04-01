@@ -1,0 +1,95 @@
+//Tadeo, Aleeiah Nicole A. BSIT 2-B
+//Activity #5.3 - Create a distance measuring device (with lights, buzzer and LCD)
+
+#include <LiquidCrystal.h> // includes the LiquidCrystal Library 
+LiquidCrystal lcd(2, 1, 7, 6, 5, 4); // Creates an LCD object. Parameters: (rs, enable, d4, d5, d6, d7) 
+#define buzzer 13
+
+const int trigPin = 12;
+const int echoPin = 11;
+int redlight = 10;
+int greenlight = 8;
+int yellowlight = 9;
+float cm, inches;
+long duration;
+
+
+
+void setup() { 
+lcd.begin(16,2); // Initializes the interface to the LCD screen, and specifies the dimensions (width and height) of the display } 
+pinMode(buzzer,OUTPUT);
+pinMode(trigPin,OUTPUT);
+pinMode(echoPin,INPUT);
+pinMode(redlight, OUTPUT);
+pinMode(yellowlight, OUTPUT);
+pinMode(greenlight, OUTPUT);
+}
+
+void loop() { 
+  long duration, distance;
+  digitalWrite(trigPin, LOW);
+  delay(2);
+  digitalWrite(trigPin, HIGH);
+  delay(10);
+  digitalWrite(trigPin, LOW);
+ 
+  
+ lcd.setCursor(0,0);
+ lcd.clear();
+ lcd.print("Distance:");
+ lcd.print(cm);
+ lcd.print("cm");
+ lcd.setCursor(0,1);
+ lcd.print("Distance:");
+ lcd.print(inches);
+ lcd.print("in");
+ delay(200);
+  
+ digitalWrite(trigPin, LOW);
+ delay(2);
+ digitalWrite(trigPin, HIGH);
+ delay(10);
+ digitalWrite(trigPin, LOW);
+  
+ duration = pulseIn(echoPin, HIGH);
+ cm = (duration/2) / 29.1;
+ inches = (duration/2) / 74;
+  
+//redlight
+  //turn RED LED light and Buzzer ON if distance is below 10cm;
+  if (cm < 10)
+  {
+   digitalWrite(redlight, HIGH);
+   digitalWrite(yellowlight, LOW);
+   digitalWrite(greenlight, LOW);
+   digitalWrite(buzzer, HIGH);
+
+  }
+  
+//yellowlight
+  //turn Yellow LED light if distance is below 11cm-20cm
+ 
+   else if (cm >=11 && cm<=20)
+   {
+   digitalWrite(yellowlight, HIGH);
+   digitalWrite(redlight, LOW);
+   digitalWrite(greenlight, LOW);
+   digitalWrite(buzzer, LOW);
+   
+  }
+  
+//greenlight
+  //turn Green LED light if distance is more than 20cm
+  //Distance information should be shown in LCD screen
+  
+   else if (cm > 20) {
+   digitalWrite(greenlight, HIGH);
+   digitalWrite(redlight, LOW);
+   digitalWrite(yellowlight, LOW);
+   digitalWrite(buzzer, LOW);
+   
+  }
+}
+  
+  
+  
